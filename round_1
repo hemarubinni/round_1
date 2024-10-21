@@ -1,0 +1,17 @@
+import java.util.*;
+class main{
+ public static void main(String args[]){
+ Scanner sc=new Scanner(System.in);
+ String str=sc.next();
+ int k=sc.nextInt();
+ int l=str.length();
+ k=k%l;
+ String rot="";
+ for(int x=0;x<l;x++){
+ int r=(x+k)%l;
+ rot+=str.charAt(r);
+ }
+ System.out.println("Input: "+str);
+ System.out.println("Rotated by position: "+k + " "+rot);
+ }
+}
